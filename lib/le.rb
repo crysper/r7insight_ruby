@@ -33,10 +33,10 @@ module Le
       logger = ActiveSupport::TaggedLogging.new(Logger.new(host))
     elsif defined?(ActiveSupport::Logger)
       logger = ActiveSupport::Logger.new(host)
-     # logger.formatter = host.formatter if host.respond_to?(:formatter)
+      logger.formatter = host.formatter if host.respond_to?(:formatter)
     else
       logger = Logger.new(host)
-      #logger.formatter = host.formatter if host.respond_to?(:formatter)
+      logger.formatter = host.formatter if host.respond_to?(:formatter)
     end
 
     logger.level = opt_log_level
