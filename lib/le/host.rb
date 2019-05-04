@@ -14,8 +14,9 @@ module Le
 
       def format_message(message_in, severity)
         message_in = message_in.inspect unless message_in.is_a?(String)
+        
 
-        "#{message_in.lstrip}"
+        {severity: severity, message: message_in.lstrip}.to_s
       end
     end
 
