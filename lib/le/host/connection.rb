@@ -140,6 +140,8 @@ module Le
         else
           @queue << "#{ message.gsub(/^/, "#{ @token } [#{ random_message_id }]") }\n"
         end
+	      
+	      dbg @queue.inspect
 
 
         if @started
