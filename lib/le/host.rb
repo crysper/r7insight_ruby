@@ -8,15 +8,14 @@ module Le
     module InstanceMethods
       def formatter
         proc do |severity, datetime, _, msg|
-          message = "#{datetime} "
-          message << format_message(msg, severity)
+          message = format_message(msg, severity)
         end
       end
 
       def format_message(message_in, severity)
         message_in = message_in.inspect unless message_in.is_a?(String)
 
-        "severity=#{severity}, #{message_in.lstrip}"
+        "#{message_in.lstrip}"
       end
     end
 
