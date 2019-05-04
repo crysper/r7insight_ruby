@@ -141,9 +141,9 @@ module Le
           @queue << "#{ message.gsub(/^/, "#{ @token } [#{ random_message_id }]") }\n"
         end
 	      
-	      dbg @queue.inspect.to_s
+	     
 	      pp @queue.to_s
-
+pp @queue.inspect.to_s
 
         if @started
           check_async_thread
