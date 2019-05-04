@@ -16,7 +16,7 @@ module Le
         message_in = message_in.inspect unless message_in.is_a?(String)
         
 
-        {severity: severity, message: message_in.lstrip}.to_s
+        {severity: severity, message: message_in.lstrip}
       end
     end
 
