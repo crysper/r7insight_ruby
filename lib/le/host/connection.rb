@@ -141,7 +141,8 @@ module Le
           @queue << "#{ message.gsub(/^/, "#{ @token } [#{ random_message_id }]") }\n"
         end
 	      
-	      dbg @queue.inspect
+	      dbg @queue.inspect.to_s
+	      pp @queue.to_s
 
 
         if @started
